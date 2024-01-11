@@ -1,0 +1,130 @@
+!----
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+
+<style type="text/css">
+
+/* DEFAULT FORM FORMATTING HERE */
+
+input {font-family: verdana; font-size: 10px; color: black; text-decoration: none; background-color: #FFFFCC; border-style: solid; border-width: 1px; border-color: #000000;}
+textarea {font-family: verdana; font-size: 12px; color: #000000; text-decoration: none; background-color: #FFFFCC; border-style: solid; border-width: 1px; border-color: #000000;}
+select {font-family: verdana; font-size: 12px; color: black; text-decoration: none; background-color: #FFFFCC; border-style: solid; border-width: 1px; border-color: #000000;}
+button { border: font-size: 13px; color: red; font-weight: bold; font-family: arial; background-color: #CC0000; text-decoration: none;}
+</style>
+
+<script language="JavaScript">
+function highlight(field) {
+       field.focus();
+       field.select();
+       field.copy();
+}</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function ClipBoard()
+{
+summary.innerText = copytext.innerText;
+Copied = holdtext.createTextRange();
+Copied.execCommand("Copy");
+}
+
+</SCRIPT>
+
+
+
+
+
+<script>
+   function copyField(from, to)
+   {
+      if (to.value == "" && from.name != "Category")
+      {
+         to.value = from.name + ": " + from.value;
+      }
+      else
+      {
+    if (from.name == "Category")
+     {
+            to.value = from.value;       
+      }
+
+        else
+     {
+         to.value = to.value + " \n" + from.name + ": " + from.value;
+     }
+      }
+   }
+</script>
+
+<title>
+ANNOTATIONS TOOL
+</title>
+
+
+
+
+
+
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+
+
+<!--- background="back1.jpg" --->
+
+<BODY>
+<font>
+<FORM name=wrapup action="">
+<b>
+
+<input type=reset value=CLEAR>
+<BR>
+<BR><select name=Category onchange="copyField(this, document.forms[0].summary);" >
+  <option value="***Kindle 1***">Kindle 1</option>
+  <option value="***Kindle 2***">Kindle 2</option>
+  <option value="***Kindle Global Wireless***">Kindle Global Wireless</option>
+  <option value="***Kindle DX***">Kindle DX</option>
+</select>
+<BR>Device/Account Issues:<BR>
+
+<TEXTAREA name=Issues rows=5 cols=28 onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);"></TEXTAREA>
+
+<BR>Actions:<BR>
+
+<TEXTAREA name=Actions rows=5 cols=28 onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);"></TEXTAREA>
+
+
+<BR>Original Order ID:<BR>
+<INPUT size=38 name=Original onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+<BR>Replacement Order <B>1</B>:<BR>
+<INPUT size=38 name=Replacement1 onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+<BR>Replacement Order <B>2</B>:<BR>
+<INPUT size=38 name=Replacement2 onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+<BR>Replacement Order <B>3</B>:<BR>
+<INPUT size=38 name=Replacement3 onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+<BR>DSN:<BR>
+<INPUT size=38 name=DSN onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+
+<BR>RML Label:<BR>
+<INPUT size=38 name=RML onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+<BR>Tracking ID:<BR>
+<INPUT size=38 name=Tracking_ID onClick='highlight(this);' onchange="copyField(this, document.forms[0].summary);">
+
+<br><b>SUMMARY:</b><br>
+<TEXTAREA name=summary rows=10 cols=50 onClick='highlight(this);' ></TEXTAREA>
+
+<BR>Follow-Up Notes:<BR>
+<TEXTAREA name=Follow-Up rows=5 cols=50 onClick='highlight(this);' onchange="copyField(document.forms[0].Tracking_ID, this);"></TEXTAREA>
+
+
+<BR><BR>
+<input type=reset value=CLEAR>
+<input type=button value=COPY onCLick="summary.execCommand("Copy");">
+</FORM>
+
+
+</BODY>
+</HTML>
+
+
+-->
